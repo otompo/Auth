@@ -4,6 +4,7 @@ import userRoutes from "./routes/user.route.js";
 import authRoutes from "./routes/auth.route.js";
 import cookieParser from "cookie-parser";
 import dotenv from "dotenv";
+import cors from "cors";
 import path from "path";
 dotenv.config();
 
@@ -27,6 +28,7 @@ const app = express();
 // });
 
 app.use(express.json());
+app.use(cors());
 
 app.use(cookieParser());
 const port = process.env.PORT;
