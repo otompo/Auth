@@ -39,9 +39,9 @@ app.listen(port || 3000, () => {
 app.use("/api/user", userRoutes);
 app.use("/api/auth", authRoutes);
 
-app.get("/", (req, res) => {
-  res.send("<h4>AUTH SERVER</h4>");
-});
+// app.get("/", (req, res) => {
+//   res.send("<h4>AUTH SERVER</h4>");
+// });
 
 app.use((err, req, res, next) => {
   const statusCode = err.statusCode || 500;
